@@ -16,15 +16,15 @@ This repository is organised into various directories representing an aspect of 
 The Motor will be situated on a testbed, where it will be placed upon a Load Cell. Additionally, there will be a Strain Gauge module that will be attached to the nozzle. The Motor is fired via an ignitor device. For the purpose of operations and reference, we shall divide the Avionics Systems into two: Motor and Ground. The microcontroller used for both systems is a Teensy 4.1, and the RF Module required for wireless communication between the two systems in an XBee S2C.  
 
 The Ground System employs a switch-controlled Ignition System with three states, SAFE, ARMED, and LAUNCHED. These are coordinated between the two systems via a Finite State Machine on both sides to ensure safe transition between phases. The Motor Side also employs logging of peripheral data in the built-in SD Card via the peripheral modules. The Strain Gauge Module (BF350) is powered via a Power Distribution Board (PDB), providing approx. 5V voltage to the module, converting the 7.4V it receives from a LiPo Battery. The Load Cell is powered by an Arduino Uno R3 to provide stable 5V input; Both the Arduino and Teensy on Motor Side are powered via a Power Bank through respective USB Cables. 
-| Module               | Motor Side | Ground Side  |
-|----------------------|------------|------------- |
-| Teensy 4.1           | ✓          | ✓           |
-| XBee S2C             | ✓          | ✓           |
-| RS232/TTL Converter  | ✓          | ✗           |
-| BF350 Strain Gauge   | ✓          | ✗           |
-| Built-in SD Card     | ✓          | ✗           |
-| Load Cell Indicator  | ✓          | ✗           |
-| Ignition Control     | ✗          | ✓           |
+| Module               | Motor Side | Ground Side  | Description                     |
+|----------------------|------------|------------- | --------------------------------|
+| Teensy 4.1           | ✓          | ✓           | Microcontroller                 |
+| XBee S2C             | ✓          | ✓           | Ignition Seq. Telemetry         |
+| RS232/TTL Converter  | ✓          | ✗           | Load Cell Data                  |
+| BF350 Strain Gauge   | ✓          | ✗           | Strain Gauge Data               |
+| Built-in SD Card     | ✓          | ✗           | Datalogging                     |
+| Load Cell Indicator  | ✓          | ✗           | Digital Indicator for Load Cell |
+| Ignition Control     | ✗          | ✓           | Switch-Control for Ignition     |
 
 ## HOW TO USE
 The `Motor` and `Ground` System directories will contain the final sketches. The `Testing Projects` directory contains all used test sketches, which may be used for individual testing or reference of the involved peripherals for future use.
