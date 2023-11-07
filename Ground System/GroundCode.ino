@@ -3,6 +3,13 @@ Final ground station code for motor test 2023.
 Components-
   Teensy 4.1 microcontroller.
   Xbee for communication 
+  Switches - KEY, ARM, LAUNCH
+Designed for ThrustMIT Avionics 2023-24
+
+@file   GroundCode.ino
+@brief  Ground Station for Motor Test
+@Author Uppaluri Jahnavi 
+@date   02.11.2023
 */
 
 //pin definitions
