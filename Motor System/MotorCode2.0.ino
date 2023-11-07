@@ -1,3 +1,23 @@
+/* Final program implemented on the Motor System for the Motor Test held on November 6th, 2023.
+      The code utilises an FSM to conduct operations in three states: SAFE, ARMED, & LAUNCHED. The operations carried out by the Motor System
+      consist of providing power to the load (ignitor for motor) upon receiving a 'launch' signal, and logging of data onto a builtin SD Card
+      to design a thrust-curve for analysing the rocket performance of an M-class motor.
+      The components used on this system involve:
+                          - LED_KEY    | represents initial state
+                          - LED_ARM    | turns on when system is ARMED
+                          - LED_LAUNCH | turns on when system has LAUNCHED
+                          - BF350      | Strain Gauge Module
+                          - RS232      | Converts RS232 to UART format
+                            Converter  |
+                          - Xbee S2C   | Ignition Seq. Telemetry
+                          - D4184      | MOSFET for motor ignition
+
+    @File    MotorCode2.0.ino
+    @brief   Program code for Motor System
+    @Author  Satvik Agrawal
+    @date    02.11.2023
+  */
+
 #include <SD.h>
 
 #define key    38                                         //LED and Peripherals
