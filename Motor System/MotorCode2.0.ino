@@ -55,13 +55,13 @@ void setup() {
   Serial5.begin(9600);
   Serial.println("Load Cell Comms. Initialised. ");
 
-  pinMode(key,    OUTPUT);                                //first three lines :-
+  pinMode(key,    OUTPUT);                                //first three lines are :-
   pinMode(arm,    OUTPUT);                                //LED configurations
   pinMode(launch, OUTPUT);
   pinMode(D1,     OUTPUT);
   pinMode(load,   OUTPUT);
   
-  digitalWrite(D1, LOW);                                  //set D4184 for SAFETY
+  digitalWrite(D1, LOW);                                  //set D4184 to LOW - SAFETY
   digitalWrite(key, HIGH);
 
   if (!SD.begin(BUILTIN_SDCARD)) {
@@ -85,7 +85,7 @@ void setup() {
 
 }
 
-STATE getCurrentState() {                                  //Get current state 
+STATE getCurrentState() {                                 //Get current state
   return currentState;
 }
 
@@ -127,9 +127,9 @@ void performOperation(STATE current) {                    //Perform Operation in
       digitalWrite(key, HIGH);
       digitalWrite(arm, HIGH);
       digitalWrite(launch, HIGH);
-      digitalWrite(D1,  HIGH);    //D4184 is pulled HIGH
+      digitalWrite(D1,  HIGH);    //D4184 is pulled HIGH, POWERING LOAD
       while (true) {
-        Peripherals();
+        Peripherals();            //Start Recording Data
       }
       break;
     case FAILURE:
