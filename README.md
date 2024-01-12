@@ -3,7 +3,7 @@ The **Motor Test** Project undertaken by team **ThrustMIT 2023-24** aims to test
 
 This Project Repository contains a collection of testing projects and files, primarily presented as `Arduino Sketches`, along with the final code programs that were developed and utilised during the testing phase and execution of the MOTOR TEST, conducted on 6th November 2023. These files are the culmination of our exploration, experimentation and research leading upto the final project.
 
-## REPOSITORY CONTENTS
+## REPOSITORY CONTENTS  
 
 This repository is organised into various directories representing an aspect of our testing process, as well as two folders for the final implemented codes for both systems. Here's a brief overview of what you'll find:
 - **`Motor System`**: Contains an Arduino Sketch (.ino file) titled as **MotorCode2.0**. This is the final program that was uploaded onto the Motor System.
